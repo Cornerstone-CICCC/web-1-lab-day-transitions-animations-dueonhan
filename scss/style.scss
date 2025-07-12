@@ -11,13 +11,18 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   height: 100vh;
-  
-  > div {
+
+  >div {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #333;
+
+    #btn1 {
+      background-color: black;
+      color: white;
+    }
   }
 
   button {
@@ -26,4 +31,7 @@ body {
     cursor: pointer;
     font-size: 20px;
   }
+
+
+
 }

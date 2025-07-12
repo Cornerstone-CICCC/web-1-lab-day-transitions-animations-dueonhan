@@ -8,17 +8,21 @@ body {
 
 .container {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   height: 100vh;
+
 }
-.container > div {
+
+.container>div {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #333;
 }
+
 .container button {
   padding: 0.75rem 1rem;
   border: none;
@@ -26,4 +30,219 @@ body {
   font-size: 20px;
 }
 
+
+
 /*# sourceMappingURL=style.css.map */
+
+
+#btn1 {
+  background-color: black;
+  color: white;
+
+}
+
+
+#btn1:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 6px 6px 1px rgba(0, 0, 0, 1);
+  transform: translate(-10px, -10px);
+}
+
+
+#btn2 {
+  position: relative;
+  background-color: black;
+  color: white;
+
+}
+
+#btn2:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 6px 6px 1px rgba(0, 0, 0, 1);
+  transform: translate(-10px, -10px);
+}
+
+
+
+
+#btn3 {
+  background-color: green;
+  color: white;
+  position: relative;
+}
+
+#btn3 .parallelogram {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 15px;
+  height: 100%;
+  background-color: white;
+  transform: skew(-20deg);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+#btn3:hover .parallelogram {
+  /*transform: translateX(calc(100vw - 100px));*/
+  left: 110%;
+  opacity: 0.3;
+}
+
+#btn3:hover {
+  filter: grayscale(50%);
+}
+
+#shape1 {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shape1 span {
+  opacity: 0;
+  display: inline-block;
+}
+
+#shape1:hover {
+  background-color: yellow;
+  color: black;
+}
+
+
+
+#shape1:hover span {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.parent {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+#shape2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: colorandShapeChange 5s infinite normal ease-in-out;
+}
+
+
+
+@keyframes colorandShapeChange {
+
+  0% {
+    background-color: red;
+    clip-path: polygon(0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% 0%);
+    width: 100px;
+    height: 100px;
+    /*transform: translate(0, 0);*/
+    top: 0;
+    left: 0;
+    border-radius: 0;
+  }
+
+  25% {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    clip-path: polygon(0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% 0%);
+    border-radius: 50%;
+    top: 0;
+    /*left: 100%;*/
+    left: calc(100% - 100px);
+
+    /* transform: translate(270px, 0); */
+    /*transform: translate(calc(100vw - 50px), 0);*/
+  }
+
+  50% {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%,
+        0% 100%,
+        100% 100%,
+        100% 100%,
+        100% 100%);
+
+    top: calc(100% - 100px);
+    /*left: 100%;*/
+    left: calc(100% - 100px);
+    border-radius: 0;
+
+    /*transform: translate(calc(100vw - 270px), calc(100vw - 220px));*/
+  }
+
+  75% {
+
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    clip-path: polygon(50% 0%,
+        90% 35%,
+        75% 90%,
+        25% 90%,
+        10% 35%);
+    top: calc(100% - 100px);
+    /*left: 100%;*/
+    left: 0;
+    /* transform: translate(calc(100% - 200px)); */
+    /*transform: translate(-10px, 220px);*/
+    /*transform: translate(-10px, calc(100vw - 220px));*/
+  }
+
+  100% {
+    background-color: red;
+    clip-path: polygon(0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% 0%);
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+
+  }
+}
+
+
+
+#figure1 img:hover {
+  filter: grayscale(100%);
+}
+
+#figure1 figcaption {
+  background-color: pink;
+  opacity: 0;
+}
+
+#figure1:hover figcaption {
+  filter: grayscale(0);
+  opacity: 1;
+  margin-top: -4px;
+}
