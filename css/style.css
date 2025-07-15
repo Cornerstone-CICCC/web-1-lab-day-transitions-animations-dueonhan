@@ -38,7 +38,8 @@ body {
 #btn1 {
   background-color: black;
   color: white;
-
+  transform: translate(0, 0);
+  transition: all .5s ease-in-out;
 }
 
 
@@ -54,7 +55,7 @@ body {
   position: relative;
   background-color: black;
   color: white;
-
+  transition: all .5s ease-in-out;
 }
 
 #btn2:hover {
@@ -71,6 +72,7 @@ body {
   background-color: green;
   color: white;
   position: relative;
+  transition: all 1s ease-in-out;
 }
 
 #btn3 .parallelogram {
@@ -102,6 +104,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .5s ease-in-out;
 }
 
 #shape1 span {
@@ -140,6 +143,7 @@ body {
   bottom: 0;
   right: 0;
   animation: colorandShapeChange 5s infinite normal ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 
